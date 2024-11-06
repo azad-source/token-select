@@ -53,7 +53,6 @@ export const Playground = () => {
     <div style={{ padding: 50 }}>
       <TokenSelect
         tokens={state}
-        width={800}
         menuMaxHeight={300}
         onChange={handleChange}
         fetchItems={fetchItems}
