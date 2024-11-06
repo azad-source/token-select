@@ -1,4 +1,4 @@
-@import 'src/variables';
+@use 'src/variables' as *;
 
 $checkbox-gap: 6px;
 $child-left-padding: 9px;

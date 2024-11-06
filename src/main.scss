@@ -1,6 +1,6 @@
-@import 'normalize.css';
-@import './variables';
-@import './styles/table';
+@use 'normalize.css' as *;
+@use './variables' as *;
+@use './styles/table' as *;
 
 @font-face {
   font-weight: 300;
