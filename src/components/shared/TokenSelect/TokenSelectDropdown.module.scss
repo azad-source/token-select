@@ -4,9 +4,11 @@ $checkbox-gap: 6px;
 $child-left-padding: 9px;
 
 @mixin item-styles {
-  padding: 0 8px;
+  padding-left: 8px;
   width: 100%;
+  flex: 1;
   border-radius: 6px;
+  box-sizing: border-box;
 }
 
 .root {
@@ -15,7 +17,8 @@ $child-left-padding: 9px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding-right: 20px;
+  padding-left: 4px;
+  padding-right: 16px;
 
   &__header {
     box-sizing: border-box;
@@ -27,7 +30,6 @@ $child-left-padding: 9px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    width: 100%;
   }
 }
 
@@ -39,7 +41,6 @@ $child-left-padding: 9px;
   box-sizing: border-box;
 
   &__header {
-    box-sizing: border-box;
     display: flex;
     align-items: center;
     gap: $checkbox-gap;
@@ -47,10 +48,11 @@ $child-left-padding: 9px;
     @include text-small;
 
     &:hover {
-      background-color: #f1f3f9;
+      background-color: $service-color-bg;
     }
 
     .buttonWrap {
+      box-sizing: border-box;
       width: 20px;
 
       .arrowIcon {
@@ -70,20 +72,42 @@ $child-left-padding: 9px;
   }
 
   &__children {
-    margin-left: 16px;
+    position: relative;
+    margin-left: 24px;
     box-sizing: border-box;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    border-left: 1px solid $color-grayscale-dark-bg;
+    width: 100%;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    width: fill-available;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -8px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1px;
+      height: 100%;
+      background-color: $color-grayscale-dark-bg;
+    }
 
     > * {
-      transform: translateX($child-left-padding);
       @include item-styles;
     }
 
     .label {
       white-space: nowrap;
+      padding-right: 20px;
+      box-sizing: border-box;
+    }
+  }
+
+  &_isChecked {
+    [class*='__header'] {
+      background-color: $service-color-bg;
     }
   }
 }

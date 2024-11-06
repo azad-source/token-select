@@ -1,6 +1,6 @@
 @use 'src/variables' as *;
 
-[data-tid='PopupMenu__root'] {
+[data-tid='TokenInput__root'] + [data-tid='PopupMenu__root'] {
   visibility: hidden;
 }
 
@@ -30,7 +30,9 @@
 
   &:focus,
   &_active {
-    box-shadow: inset 0 0 0 1px #fff, 0 0 0 2px $service-color;
+    box-shadow:
+      inset 0 0 0 1px #fff,
+      0 0 0 2px $service-color;
   }
 
   &__list {
