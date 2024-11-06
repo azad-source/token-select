@@ -1,0 +1,89 @@
+@import 'src/variables';
+
+$checkbox-gap: 6px;
+$child-left-padding: 9px;
+
+@mixin item-styles {
+  padding: 0 8px;
+  width: 100%;
+  border-radius: 6px;
+}
+
+.root {
+  background-color: #fff;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-right: 20px;
+
+  &__header {
+    box-sizing: border-box;
+    color: $color-grayscale-text;
+  }
+
+  &__list {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+  }
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-grow: 1;
+  box-sizing: border-box;
+
+  &__header {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: $checkbox-gap;
+    @include item-styles;
+    @include text-small;
+
+    &:hover {
+      background-color: #f1f3f9;
+    }
+
+    .buttonWrap {
+      width: 20px;
+
+      .arrowIcon {
+        color: $color-grayscale-disabled-text;
+      }
+    }
+  }
+
+  &_isNotParent {
+    [class*='__header'] {
+      padding-left: 2px;
+
+      .buttonWrap {
+        width: unset;
+      }
+    }
+  }
+
+  &__children {
+    margin-left: 16px;
+    box-sizing: border-box;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid $color-grayscale-dark-bg;
+
+    > * {
+      transform: translateX($child-left-padding);
+      @include item-styles;
+    }
+
+    .label {
+      white-space: nowrap;
+    }
+  }
+}

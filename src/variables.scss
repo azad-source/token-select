@@ -1,0 +1,172 @@
+/** COLORS */
+
+/** Brand colors */
+$service-color: #366af3;
+$service-color-bg: #eceef6;
+$service-color-hover: #3365e8;
+$service-color-active: #2e5ad1;
+$service-second-color-hover: #dde6ff;
+$service-second-color-active: #becfff;
+$service-second-color-disabled: #9fb8ff;
+
+/** Warning colors */
+$color-warning-border: #ef8b17;
+
+// $color-warning-text: #ef8b17;
+// $color-warning-shape: #fcb73e;
+// $color-warning-background: #ffeec2;
+
+/** Error colors */
+$color-error-border: #fe4c4c;
+$color-error-shape: #ff5a49;
+
+// $color-error-text: #cb3d35;
+// $color-error-shape-hover: #ee5042;
+// $color-error-shape-active: #dd473b;
+// $color-error-background: #ffebeb;
+
+/** Status colors */
+// $color-status-draft: #cdedff;
+// $color-status-warning: $color-warning-background;
+// $color-status-canceled: #ffddd6;
+// $color-status-completed: #c7f9cc;
+
+/** Link colors */
+// $color-link-light-green: #46cd68;
+
+/** Chart colors */
+$color-chart-line: #618aff;
+
+/** Other colors */
+$color-grayscale-text: #222;
+$color-grayscale-border: rgba(0 0 0 / 10%);
+$color-grayscale-border-medium: rgba(0 0 0 / 16%);
+$color-grayscale-secondary-text: #757575;
+$color-grayscale-x-icon: #858585;
+$color-grayscale-disabled-text: #adadad;
+$color-grayscale-medium-bg: #f0f0f0;
+$color-grayscale-background: #e6e6e6;
+$color-grayscale-dark-bg: #d6d6d6;
+$color-grayscale-light-bg: #f6f6f6;
+$row-edit-bg: rgba(254 254 173 / 60%);
+
+// $color-grayscale-bg: rgba(0, 0, 0, 0.05);
+
+/** SIZES */
+$content-min-width: 1280px;
+$sidemenu-min-width: 72px;
+$page-side-gap: 40px;
+$total-page-width: calc(
+  $content-min-width + $sidemenu-min-width + 2 * $page-side-gap
+);
+$table-column-gap: 8px;
+$label-right-margin: 24px;
+$label-bottom-margin: 12px;
+
+/** Device Breakpoints */
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
+
+/** Shaddows */
+$box-shadow: 0 -4px 16px 0 rgba(0 0 0 / 8%);
+
+/** FONTS */
+
+/** Fonts Title Large */
+@mixin title-large {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 700;
+}
+
+/** Fonts Title Medium Regular */
+@mixin title-medium-regular {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+/** Fonts Title Medium */
+@mixin title-medium {
+  font-weight: 700;
+  @include title-medium-regular;
+}
+
+/** Fonts Title Small Regular */
+@mixin title-small-regular {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+/** Fonts Title Small */
+@mixin title-small {
+  font-weight: 700;
+  @include title-small-regular;
+}
+
+/** Fonts Text Large */
+@mixin text-large {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+/** Fonts Text Large Bold */
+@mixin text-large-bold {
+  font-weight: 700;
+  @include text-large;
+}
+
+/** Fonts Text Medium */
+@mixin text-medium {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+/** Fonts Text Medium Bold */
+@mixin text-medium-bold {
+  font-weight: 700;
+  @include text-medium;
+}
+
+/** Fonts Text Small */
+@mixin text-small {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+/** Fonts Text Small Bold */
+@mixin text-small-bold {
+  font-weight: 700;
+  @include text-small;
+}
+
+/** Fonts Text Tiny */
+@mixin text-tiny {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+/** Fonts Text Tiny Bold */
+@mixin text-tiny-bold {
+  font-weight: 700;
+  @include text-tiny;
+}
+
+/** OTHER */
+
+/** Table content */
+@mixin table-content {
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  min-height: 400px;
+}
+
+@mixin table-paging {
+  margin-top: 24px;
+  margin-left: 6px;
+  width: 100%;
+}

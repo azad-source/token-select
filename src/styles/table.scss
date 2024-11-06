@@ -1,0 +1,63 @@
+@import '../variables';
+
+table {
+  box-sizing: border-box;
+  table-layout: fixed;
+  border-spacing: 0;
+  padding-bottom: 8px;
+  width: 100%;
+  @include text-small;
+}
+
+th {
+  height: 42px;
+  padding: 0 $table-column-gap;
+  color: $color-grayscale-secondary-text;
+  font-weight: 400;
+  border-bottom: 1px solid $color-grayscale-border;
+
+  > div {
+    padding: 8px 0 6px;
+  }
+}
+
+td {
+  padding: 16px $table-column-gap;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  &:first-child + * {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+
+  &:nth-last-child(2) {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+}
+
+th,
+td {
+  box-sizing: border-box;
+  text-align: left;
+
+  &:first-child,
+  &:last-child {
+    width: 0;
+    padding-left: 0;
+  }
+}
+
+tbody {
+  tr {
+    cursor: pointer;
+
+    &:hover {
+      td:not(:first-child, :last-child) {
+        background-color: $color-grayscale-medium-bg;
+      }
+    }
+  }
+}

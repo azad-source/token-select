@@ -1,0 +1,45 @@
+@import 'normalize.css';
+@import './variables';
+@import './styles/table';
+
+@font-face {
+  font-weight: 300;
+  font-family: 'Lab Grotesque';
+  src: url('https://s.kontur.ru/common-v2/fonts/LabGrotesque/LabGrotesque-Light.woff2')
+      format('woff2'),
+    url('https://s.kontur.ru/common-v2/fonts/LabGrotesque/LabGrotesque-Light.woff')
+      format('woff');
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: 'Lab Grotesque';
+  src: url('https://s.kontur.ru/common-v2/fonts/LabGrotesque/LabGrotesque-Regular.woff2')
+      format('woff2'),
+    url('https://s.kontur.ru/common-v2/fonts/LabGrotesque/LabGrotesque-Regular.woff')
+      format('woff');
+}
+
+@font-face {
+  font-weight: 600;
+  font-family: 'Lab Grotesque';
+  src: url('https://s.kontur.ru/common-v2/fonts/LabGrotesque/LabGrotesque-Medium.woff2')
+      format('woff2'),
+    url('https://s.kontur.ru/common-v2/fonts/LabGrotesque/LabGrotesque-Medium.woff')
+      format('woff');
+}
+
+html,
+body,
+#root {
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  color: $color-grayscale-text;
+  font-family: 'Lab Grotesque', -apple-system, BlinkMacSystemFont, Arial,
+    'Liberation Sans', 'Nimbus Sans L', sans-serif;
+  font-feature-settings: 'ss02' on;
+  -webkit-font-smoothing: antialiased;
+}

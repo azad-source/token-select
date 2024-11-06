@@ -1,0 +1,64 @@
+@import 'src/variables';
+
+[data-tid='PopupMenu__root'] {
+  visibility: hidden;
+}
+
+[data-tid='TokenInputMenu__root'] {
+  display: none;
+}
+
+.root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  transform: translateY(-90%);
+}
+
+.inputField {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  background-color: #fff;
+  border-radius: 1px;
+  box-sizing: border-box;
+  padding: 1px 3px;
+  width: 100%;
+  min-height: 30px;
+  outline: none;
+  box-shadow: 0 0 0 1px $color-grayscale-border-medium;
+
+  &:focus,
+  &_active {
+    box-shadow: inset 0 0 0 1px #fff, 0 0 0 2px $service-color;
+  }
+
+  &__list {
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    align-items: center;
+    cursor: pointer;
+  }
+}
+
+.dropdownFooter {
+  display: flex;
+  align-items: center;
+  color: $color-grayscale-secondary-text;
+  @include text-small;
+
+  &__cancelButton {
+    margin-left: auto;
+  }
+}
+
+.token {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  &__counter {
+    @include text-small-bold;
+  }
+}

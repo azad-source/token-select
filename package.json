@@ -1,0 +1,37 @@
+{
+  "name": "frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@skbkontur/colors": "^1.0.0",
+    "@skbkontur/icons": "^1.12.0",
+    "@skbkontur/logos": "^2.9.0",
+    "@skbkontur/react-error-pages": "^2.0.4",
+    "@skbkontur/react-ui": "^4.26.0",
+    "@skbkontur/react-ui-addons": "^4.11.4",
+    "@skbkontur/react-ui-validations": "^1.16.3",
+    "@skbkontur/side-menu": "^2.1.5",
+    "axios": "^1.7.6",
+    "chart.js": "^4.4.4",
+    "clsx": "^2.1.1",
+    "dayjs": "^1.11.13",
+    "lodash": "^4.17.21",
+    "normalize.css": "^8.0.1",
+    "react": "^18.3.1",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.1"
+  },
+  "devDependencies": {
+    "sass": "^1.77.8",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.1",
+    "vite-plugin-svgr": "^4.2.0",
+    "vite-tsconfig-paths": "^5.0.1"
+  }
+}
