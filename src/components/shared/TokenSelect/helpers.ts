@@ -1,6 +1,6 @@
 import { Checkbox } from '@skbkontur/react-ui';
 import { ITokenSelectItem, ITokenSelectDropdownItem } from './models';
-import { cached } from '../../../utils/cacheFunction/cacheFunction';
+import { cached } from 'utils/cacheFunction/cacheFunction';
 
 /**
  * Проверяет, есть ли хотя бы один выделенный элемент среди указанных.
